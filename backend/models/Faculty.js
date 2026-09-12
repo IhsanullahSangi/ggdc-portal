@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const facultySchema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -8,4 +8,4 @@ const facultySchema = new mongoose.Schema({
     photoUrl: { type: String } // Cloudinary Image Link
 });
 
-module.exports = mongoose.model('Faculty', facultySchema);
+export default mongoose.model('Faculty', facultySchema);

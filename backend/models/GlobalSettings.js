@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const globalSettingsSchema = new mongoose.Schema({
     isPopupActive: { type: Boolean, default: false },
@@ -7,4 +7,4 @@ const globalSettingsSchema = new mongoose.Schema({
     enrollmentCount: { type: Number, default: 551 } // Dynamic counter
 });
 
-module.exports = mongoose.model('GlobalSettings', globalSettingsSchema);
+export default mongoose.model('GlobalSettings', globalSettingsSchema);

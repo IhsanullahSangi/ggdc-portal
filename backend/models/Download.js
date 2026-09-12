@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const downloadSchema = new mongoose.Schema({
     title: { type: String, required: true },
@@ -11,4 +11,4 @@ const downloadSchema = new mongoose.Schema({
     uploadedAt: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Download', downloadSchema);
+export default mongoose.model('Download', downloadSchema);

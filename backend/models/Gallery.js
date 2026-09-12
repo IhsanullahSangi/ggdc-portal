@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const gallerySchema = new mongoose.Schema({
     title: { type: String, required: true },
@@ -11,4 +11,4 @@ const gallerySchema = new mongoose.Schema({
     eventDate: { type: Date }
 });
 
-module.exports = mongoose.model('Gallery', gallerySchema);
+export default mongoose.model('Gallery', gallerySchema);
