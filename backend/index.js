@@ -15,6 +15,9 @@ import galleryRoutes from './routes/galleryRoutes.js';
 // 1. Add this import at the top with your other routes
 import facultyRoutes from './routes/facultyRoutes.js';
 
+// 1. Add this import at the top
+import timetableRoutes from './routes/timetableRoutes.js';
+
 dotenv.config();
 connectDB();
 
@@ -38,6 +41,9 @@ app.use('/api/gallery', galleryRoutes);
 
 // 2. Add this mount point below app.use('/api/gallery', galleryRoutes);
 app.use('/api/faculty', facultyRoutes);
+
+// 2. Mount the route further down (e.g., below app.use('/api/downloads', downloadsRoutes); )
+app.use('/api/timetables', timetableRoutes);
 
 app.get('/api/health', (req, res) => {
     res.status(200).json({
